@@ -1,0 +1,91 @@
+#include <iostream.h>
+#include <conio.h>
+
+void garis()
+{
+cout<<"==========================================================\n";
+}
+void main()
+{
+cout<<"================================================"<<endl;
+cout<<"NAMA : Dede Rizal Mustofa"<<endl;
+cout<<"NIM : 1127050032"<<endl;
+cout<<"================================================"<<endl;
+
+cout<<"================================================"<<endl;
+cout<<"PROGRAM MENGHITUNG NILAI AKHIR"<<endl;
+cout<<"MATA KULIAH PRAKTIKUM DASAR PEMROGRAMAN"<<endl;
+cout<<"================================================";
+cout<<endl;
+
+int jm;
+cout<<"\n\tMASUKKAN JUMLAH MAHASISWA : ";
+cin>>jm;
+
+char nama[50][100];
+int nim[50];
+int tugas[50];
+int uts[50];
+int uas[50];
+int akhir[50];
+
+for(int i=1; i<=jm; i++)
+{
+
+cout<<"\n"<<endl;
+cout<<"\tMAHASISWA KE-"<<i<<endl;
+cout<<"\t-------------------------------\n"<<endl;
+cout<<"\tNAMA MAHASISWA : ";
+cin>>nama[i];
+cout<<"\tNIM :";cin>>nim[i];
+cout<<"\tNILAI TUGAS : ";
+cin>>tugas[i];
+cout<<"\tNILAI UTS : ";
+cin>>uts[i];
+cout<<"\tNILAI UAS : ";
+cin>>uas[i];
+akhir[i]=(tugas[i]*0.3)+(uts[i]*0.3)+(uas[i]*0.4);
+
+}
+
+cout<<" \t--------------------------------------------------------------- "<<endl;
+cout<<" \t DAFTAR NILAI "<<endl;
+cout<<" \t MATAKULIAH : BAHASA PEMROGRAMAN "<<endl;
+cout<<" \t--------------------------------------------------------------- "<<endl;
+cout<<" \t NIM "<<endl;
+cout<<" \tNo. Nama Nilai Grade "<<endl;
+cout<<" \t Mahasiswa ------------------------------"<<endl;
+cout<<" \t Tugas UTS UAS Akhir "<<endl;
+cout<<" \t--------------------------------------------------------------- "<<endl;
+
+cout<<"range: ";
+garis();
+for (int i=1;i<=jm;i++)
+{
+cout<<"\t"<<i;
+cout<<"\t"<<nama[i]<<"\t";
+cout<<"\t"<<nim[i];
+cout<<"\t"<<tugas [i];
+cout<<"\t"<<uts [i];
+cout<<"\t"<<uas [i];
+cout<<"\t"<<akhir [i];
+
+if (akhir[i]>=80)
+cout<<"\t A";
+else if (akhir[i]>=70)
+cout<<"\t B";
+else if (akhir[i]>=60)
+cout<<"\t C";
+else if (akhir[i]>=50)
+cout<<"\t D";
+else if (akhir[i]<50)
+cout<<"\t E";
+
+cout<<endl;
+
+}
+cout<<" \t--------------------------------------------------------------- "<<endl;
+cout<<" \n\tTOTAL MAHASISWA = "<<jm<<endl;
+
+getch();
+}
